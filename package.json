@@ -2,11 +2,12 @@
   "name": "imy220_playlist_project",
   "version": "1.0.0",
   "description": "Create a playlist sharing and playing website for IMY220 Project",
-  "main": "index.js",
+  "main": "frontend/src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack -w && babel server.js -d dist",
-    "start": "node dist/server.js"
+    "build": "webpack && babel backend/server.js -d backend/dist",
+    "start": "npm run build && node backend/dist/server.js",
+    "watch": "webpack -w"
   },
   "author": "u22598805",
   "license": "ISC",

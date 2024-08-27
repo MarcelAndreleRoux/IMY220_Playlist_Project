@@ -1,11 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
+
+import { HomePage } from "./pages/HomePage";
 
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Hello World!</h1>
+      <div className="container">
+        <HomePage />
       </div>
     );
   }
