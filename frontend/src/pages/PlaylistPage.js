@@ -8,6 +8,10 @@ import React from "react";
 
 export class PlaylistPage extends React.Component {
   render() {
-    return <></>;
+    return (
+      <div className="home container">
+        <h1>This is my playlist</h1>
+      </div>
+    );
   }
 }
