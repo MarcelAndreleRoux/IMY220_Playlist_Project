@@ -1,6 +1,6 @@
 import React from "react";
 
-export class Profile extends React.Component {
+export class ProfilePage extends React.Component {
   render() {
     return (
       <div className="home container">

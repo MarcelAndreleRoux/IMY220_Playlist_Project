@@ -6,7 +6,7 @@ import React from "react";
 // component itself, or in a separate component, depending on how you
 // manage this functionality.
 
-export class Playlist extends React.Component {
+export class PlaylistPage extends React.Component {
   render() {
     return <></>;
   }

@@ -1,6 +1,6 @@
 import React from "react";
 
-export class Splash extends React.Component {
+export class SplashPage extends React.Component {
   render() {
     return (
       <div className="home container">
