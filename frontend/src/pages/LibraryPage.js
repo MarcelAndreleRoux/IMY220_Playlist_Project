@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
 
-// PlaylistPage Component (displays a list of playlists)
 export class LibraryPage extends React.Component {
   constructor(props) {
     super(props);

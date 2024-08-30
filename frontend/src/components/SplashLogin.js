@@ -4,8 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 // import X_Logo from "../../public/assets/images/X.png";
 // import Facebook_Logo from "../../public/assets/images/facebook.png";
 
-// contains all the information / inputs required to log in, the login
-// functionality does not need to be implemented yet
 export function SplashLogin({ users, setAuthenticatedUser }) {
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -18,10 +16,8 @@ export function SplashLogin({ users, setAuthenticatedUser }) {
     const email = LoginInputEmail.current.value;
     const password = LoginInputPassword.current.value;
 
-    // Prune the email to get the username part (before @)
     const username = email.split("@")[0];
 
-    // Check if the username and password match a registered user
     const user = users.find(
       (user) => user.username === username && user.password === password
     );

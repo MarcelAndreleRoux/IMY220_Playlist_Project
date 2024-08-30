@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 // import X_Logo from "../../public/assets/images/X.png";
 // import Facebook_Logo from "../../public/assets/images/facebook.png";
 
-// Contains all the information/inputs required to sign up
 export function SplashRegister() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -42,7 +41,6 @@ export function SplashRegister() {
       return;
     }
 
-    // Simulate registration logic and navigate to home page
     navigate("/login");
   };
 
