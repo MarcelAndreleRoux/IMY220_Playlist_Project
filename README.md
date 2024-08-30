@@ -1,3 +1,8 @@
-New IMY220 Project to create a website to share and create playlists of music.
+Build docker image:
+docker build -t imy220-playlist-website .
 
-I made a change here.
+Run docker image:
+docker run -p 3000:3000 imy220-playlist-website
+
+Stop docker image:
+Ctrl + C in terminal
