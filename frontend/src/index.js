@@ -2,12 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Image1 from "../public/assets/images/album_covers/Bee.jpg";
-import Image2 from "../public/assets/images/album_covers/Chin.jpg";
-import Image3 from "../public/assets/images/album_covers/Coke.jpg";
-import Image4 from "../public/assets/images/album_covers/Milky.jpg";
-import Image5 from "../public/assets/images/album_covers/Blond.jpg";
-import Image6 from "../public/assets/images/album_covers/Blue.jpg";
+// import Image1 from "../public/assets/images/album_covers/Bee.jpg";
+// import Image2 from "../public/assets/images/album_covers/Chin.jpg";
+// import Image3 from "../public/assets/images/album_covers/Coke.jpg";
+// import Image4 from "../public/assets/images/album_covers/Milky.jpg";
+// import Image5 from "../public/assets/images/album_covers/Blond.jpg";
+// import Image6 from "../public/assets/images/album_covers/Blue.jpg";
 
 import { HomePage } from "./pages/HomePage";
 import { LibraryPage } from "./pages/LibraryPage";
@@ -37,7 +37,7 @@ class App extends React.Component {
           id: 1,
           name: "Chill Vibes",
           author: "DJ Cool",
-          image: { Image1 },
+          image: "something.png",
           songs: [
             { id: 1, name: "Song A" },
             { id: 2, name: "Song B" },
@@ -48,7 +48,7 @@ class App extends React.Component {
           id: 2,
           name: "Workout Mix",
           author: "Gym Buddy",
-          image: { Image2 },
+          image: "something.png",
           songs: [
             { id: 4, name: "Song D" },
             { id: 5, name: "Song E" },
@@ -59,7 +59,7 @@ class App extends React.Component {
           id: 3,
           name: "Study Beats",
           author: "Focus Master",
-          image: { Image3 },
+          image: "something.png",
           songs: [
             { id: 7, name: "Song G" },
             { id: 8, name: "Song H" },
@@ -72,7 +72,7 @@ class App extends React.Component {
           id: 4,
           name: "Summer Hits",
           author: "DJ Sunshine",
-          image: { Image4 },
+          image: "something.png",
           songs: [
             { id: 10, name: "Song J" },
             { id: 11, name: "Song K" },
@@ -83,7 +83,7 @@ class App extends React.Component {
           id: 5,
           name: "Relaxing Piano",
           author: "Chill Keys",
-          image: { Image5 },
+          image: "something.png",
           songs: [
             { id: 13, name: "Song M" },
             { id: 14, name: "Song N" },
@@ -94,7 +94,7 @@ class App extends React.Component {
           id: 6,
           name: "Rock Classics",
           author: "Rockstar",
-          image: { Image6 },
+          image: "something.png",
           songs: [
             { id: 16, name: "Song P" },
             { id: 17, name: "Song Q" },

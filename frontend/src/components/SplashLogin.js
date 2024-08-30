@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Google_Logo from "../../public/assets/images/Google.jpg";
-import X_Logo from "../../public/assets/images/X.png";
-import Facebook_Logo from "../../public/assets/images/facebook.png";
+// import Google_Logo from "../../public/assets/images/Google.jpg";
+// import X_Logo from "../../public/assets/images/X.png";
+// import Facebook_Logo from "../../public/assets/images/facebook.png";
 
 // contains all the information / inputs required to log in, the login
 // functionality does not need to be implemented yet
@@ -44,17 +44,19 @@ export function SplashLogin({ users, setAuthenticatedUser }) {
       <div className="social-buttons">
         <button>
           <Link to="/home">
-            <img width={100} src={Google_Logo} alt="Google logo" />
+            {/* <img width={100} src={Google_Logo} alt="Google logo" /> */}
+            Google
           </Link>
         </button>
         <button>
           <Link to="/home">
-            <img width={100} src={X_Logo} alt="X logo" />
+            {/* <img width={100} src={X_Logo} alt="X logo" /> */}Twitter/X
           </Link>
         </button>
         <button>
           <Link to="/home">
-            <img width={100} src={Facebook_Logo} alt="Facebook logo" />
+            {/* <img width={100} src={Facebook_Logo} alt="Facebook logo" /> */}
+            Facebook
           </Link>
         </button>
       </div>
