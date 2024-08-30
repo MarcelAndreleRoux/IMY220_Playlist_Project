@@ -1,9 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-// the context menu that contains all the information to let a user add a song to a playlist
+export function AddSongPlaylist() {
+  const navigate = useNavigate();
 
-export class AddSongPlaylist extends React.Component {
-  render() {
-    return <></>;
-  }
+  const handleAddToPlaylist = () => {
+    navigate("/explore");
+  };
+
+  return <button onClick={handleAddToPlaylist}>Add to Playlist</button>;
 }

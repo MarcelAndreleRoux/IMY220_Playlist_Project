@@ -7,8 +7,10 @@ export class Navbar extends React.Component {
   render() {
     return (
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/playlist">Playlist</Link>
+        <Link to="/home">Home</Link>
+        <Link to="/library">Playlist</Link>
+        <Link to="/explore">Explore</Link>
+        <Link to="/profile">My Profile</Link>
       </nav>
     );
   }

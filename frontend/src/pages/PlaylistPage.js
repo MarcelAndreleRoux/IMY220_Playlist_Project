@@ -1,33 +1,51 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
-import { Song } from "../components/Song";
+import { useParams } from "react-router-dom";
+import { AddSongPlaylist } from "../components/AddSongPlaylist";
 
-// Playlist Component (contains all required information on a single playlist)
-// You would need to be able to list all of the songs (hint: song
-// component) that belong to a playlist. This could be done in the playlist
-// component itself, or in a separate component, depending on how you
-// manage this functionality.
+class PlaylistPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleAddSong = this.handleAddSong.bind(this);
+  }
 
-const songs = [
-  { id: "1", name: "Song 1" },
-  { id: "2", name: "Song 2" },
-  { id: "3", name: "Song 3" },
-];
+  handleAddSong(song) {
+    const { playlistId } = this.props.params;
+    this.props.addSongToPlaylist(parseInt(playlistId), song);
+  }
 
-export class PlaylistPage extends React.Component {
   render() {
+    const { playlistId, explorePlaylistId } = this.props.params;
+    const playlist = explorePlaylistId
+      ? this.props.playlists.find((pl) => pl.id === parseInt(explorePlaylistId))
+      : this.props.playlists.find((pl) => pl.id === parseInt(playlistId));
+
+    if (!playlist) {
+      return <div>Playlist not found</div>;
+    }
+
     return (
-      <div className="home container">
+      <div className="playlist container">
         <Navbar />
+        <h1>{playlist.name}</h1>
         <ul>
-          {songs.map((song) => (
+          {playlist.songs.map((song) => (
             <li key={song.id}>
-              <Link to={`/song/${song.id}`}>Song</Link>
+              {song.name}
+              {explorePlaylistId && (
+                <button onClick={() => this.handleAddSong(song)}>Add</button>
+              )}
             </li>
           ))}
         </ul>
+        {!explorePlaylistId && <AddSongPlaylist playlistId={playlistId} />}
       </div>
     );
   }
 }
+
+function withParams(Component) {
+  return (props) => <Component {...props} params={useParams()} />;
+}
+
+export default withParams(PlaylistPage);
