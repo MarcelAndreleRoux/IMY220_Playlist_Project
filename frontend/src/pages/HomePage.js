@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
 
@@ -44,13 +45,24 @@ export class HomePage extends React.Component {
         ) : (
           <p>Please log in to see your personalized content.</p>
         )}
+=======
+
+export class HomePage extends React.Component {
+  render() {
+    return (
+      <div className="home container">
+        <h1>Hello World!</h1>
+>>>>>>> parent of 22c4ec6 (Added Basic JS Files)
       </div>
     );
   }
 }
+<<<<<<< HEAD
 
 HomePage.defaultProps = {
   username: "General",
   isAuthenticated: true,
   playlist: [],
 };
+=======
+>>>>>>> parent of 22c4ec6 (Added Basic JS Files)
